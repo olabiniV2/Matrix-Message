@@ -22,7 +22,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: send message
-       uses: olabiniV2/matrix-message-action@v0.0.1
+       uses: olabiniV2/matrix-msg-action@v0.0.1
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
@@ -30,3 +30,9 @@ jobs:
          message: "Hello, world"
          server: "matrix.org"
 ```
+
+
+## Credits
+
+This project was primarily created by Martin Pugh (pugh@s3kr.it). This version is a very slight change that might be
+contributed back soon.

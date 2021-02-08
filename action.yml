@@ -1,6 +1,6 @@
-name: matrix-message
+name: matrix-msg
 description: Send a message with subject to a matrix channel
-author: Martin Pugh (pugh@s3kr.it)
+author: Ola Bini (ola@olabini.se)
 inputs:
   server:
     description: "Matrix server hostname"
