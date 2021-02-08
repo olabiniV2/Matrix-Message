@@ -1,6 +1,6 @@
 # Matrix Message github action
 
-This is a simple github action to send messages to matrix servers.
+This is a simple github action to send messages with subjects to matrix servers.
 
 ## Usage
 
@@ -22,10 +22,11 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: send message
-       uses: s3krit/matrix-message-action@v0.0.3
+       uses: olabiniV2/matrix-message-action@v0.0.1
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
+         subject: "Something"
          message: "Hello, world"
          server: "matrix.org"
 ```

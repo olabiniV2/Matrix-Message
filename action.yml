@@ -1,5 +1,5 @@
 name: matrix-message
-description: Send a message to a matrix channel
+description: Send a message with subject to a matrix channel
 author: Martin Pugh (pugh@s3kr.it)
 inputs:
   server:
@@ -15,9 +15,13 @@ inputs:
     default: ""
     required: true
   message:
-    description: "Message to send in plaintext format"
+    description: "Message to send in markdown or html format"
     default: ""
     required: true
+  subject:
+    description: "Subject of message in plaintext format"
+    default: ""
+    required: false
 runs:
   using: docker
   image: 'Dockerfile'
