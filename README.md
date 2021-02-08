@@ -22,7 +22,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: send message
-       uses: olabiniV2/matrix-msg-action@v0.0.1
+       uses: olabiniV2/matrix-message@v0.0.1
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
