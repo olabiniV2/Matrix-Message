@@ -1,6 +1,6 @@
 # Matrix Message github action
 
-This is a simple github action to send messages to matrix servers.
+This is a simple github action to send messages with subjects to matrix servers.
 
 ## Usage
 
@@ -10,8 +10,7 @@ Sending messages requires generating of an access token, which can be done with
 The Room ID does not refer to the room's name, but its unique ID. In Riot, this
 can be found by navigating to 'Room Settings' -> 'Advanced'.
 
-`formatted_message` is optional, and accepts Matrix HTML-formatted message. If
-it is not specified, only the `message` argument will be sent.
+Markdown-formatted messages are supported.
 
 ```workflow
 name: Send a hello world to matrix every 5 minutes
@@ -23,11 +22,17 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: send message
-       uses: s3krit/matrix-message-action@v0.0.1
+       uses: olabiniV2/matrix-message@v0.0.1
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
+         subject: "Something"
          message: "Hello, world"
-         formatted_message: "<strong>Hello</strong><br /><em>world!</em>"
          server: "matrix.org"
 ```
+
+
+## Credits
+
+This project was primarily created by Martin Pugh (pugh@s3kr.it). This version is a very slight change that might be
+contributed back soon.
